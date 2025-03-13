@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Vigilance - Security Investigation Tool",
+  "version": "1.0",
+  "description": "A browser extension to investigate security events (IP addresses and files) across multiple threat intelligence platforms.",
+  "permissions": ["contextMenus", "tabs", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/vigilances16.png",
+    "48": "icons/vigilances48.png",
+    "128": "icons/vigilances128.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icons/vigilances128.png"
+  }
+}
