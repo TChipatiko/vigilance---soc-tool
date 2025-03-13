@@ -134,3 +134,31 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# === Added for Browser Extension Development ===
+
+# Chrome Extension output files
+*.crx
+*.pem
+
+# Build directories
+dist/
+build/
+
+# API Keys and Configs
+config.json
+
+# VS Code settings
+.vscode/
+.idea/
+
+# Browser extension cache/logs
+.chrome-cache/
+.firefox-cache/
+
+# Lighthouse performance test reports
+.lighthouseci/
+
+# Temporary files
+Thumbs.db
+.DS_Store
