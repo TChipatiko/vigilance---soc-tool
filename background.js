@@ -30,12 +30,12 @@ function handleInvestigation(type, query) {
       case "hash_check":
           urls = [
               `https://www.virustotal.com/gui/search/${query}`,
-              `https://metadefender.opswat.com/results/file/${query}/hash`,
+              `https://metadefender.com/results/hash/${query}`,
               `https://opentip.kaspersky.com/${query}`,
               `https://exchange.xforce.ibmcloud.com/malware/${query}`,
-              `https://talosintelligence.com/file-reputation#/lookup/${query}`,
+              `https://talosintelligence.com/talos_file_reputation?s=${query}`,
               `https://otx.alienvault.com/indicator/file/${query}`,
-              `https://bazaar.abuse.ch/browse.php?search=sha256:${query}`
+              `https://bazaar.abuse.ch/browse.php?search=${query}`
           ];
           break;
       case "ip_reputation":
