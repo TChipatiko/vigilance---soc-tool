@@ -35,7 +35,7 @@ function handleInvestigation(type, query) {
               `https://exchange.xforce.ibmcloud.com/malware/${query}`,
               `https://talosintelligence.com/talos_file_reputation?s=${query}`,
               `https://otx.alienvault.com/indicator/file/${query}`,
-              `https://bazaar.abuse.ch/browse.php?search=${query}`
+              `https://bazaar.abuse.ch/browse.php?search=sha256:${query}`
           ];
           break;
       case "ip_reputation":
@@ -43,15 +43,12 @@ function handleInvestigation(type, query) {
               `https://www.virustotal.com/gui/ip-address/${query}`,
               `https://www.abuseipdb.com/check/${query}`,
               `https://talosintelligence.com/reputation_center/lookup?search=${query}`,
-              `https://www.ipvoid.com/ip-blacklist-check/${query}`,
               `https://exchange.xforce.ibmcloud.com/ip/${query}`,
               `https://otx.alienvault.com/indicator/ip/${query}`,
-              `https://urlhaus.abuse.ch/browse.php?search=${query}`
           ];
           break;
       case "ip_info":
           urls = [
-              `https://rdap.arin.net/registry/ip/${query}`,
               `https://stat.ripe.net/${query}`,
               `https://bgp.he.net/ip/${query}#_whois`,
               `https://ipinfo.io/${query}`,
@@ -60,9 +57,11 @@ function handleInvestigation(type, query) {
               `https://dnschecker.org/ip-whois-lookup.php?query=${query}`
           ];
           break;
-      case "info_search":
+      case "completed info_search":
           urls = [
-              `https://www.shodan.io/search?query=${query}`
+              `https://www.file.net/process/${query}.html`
+              `https://www.google.com/search?q="${query}"`
+              `https://www.processlibrary.com/en/search?q="${query}"`
           ];
           break;
   }
